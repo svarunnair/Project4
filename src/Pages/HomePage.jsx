@@ -11,7 +11,7 @@ function HomePage() {
   const homedata=()=>{
 
     axios({
-      url:"https://api.coindesk.com/v1/bpi/currentprice.json",
+      url:"https://api.jikan.moe/v4/anime?q=naruto",
       method:'GET'
     })
     .then((res)=>{
@@ -30,30 +30,11 @@ function HomePage() {
   return (
     <div><h1>HomePage</h1>
     <button onClick={handleLogout}>Logout</button><br/>
-    
-    {/* {data?.map((item)=>(
-      <>
-      {item.exchange
-}
-      </>
-    ))} */}
-
-    {/* {data.map((item)=>(
-      <>
-      {item}
-      </>
-    ))} */}
-
-    <img  src="url"/>
+  
+      {/* {data.metadata} */}
 
 
-    {/* {data.exchange
-}<br/> */}
-
-
-<img src='link' />
-
-    
+    {/* <img src={data?.metadata?.images[0]}/> */}
 
     </div>
   )

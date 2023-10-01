@@ -1,3 +1,4 @@
+import { Button, Input } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -56,9 +57,9 @@ function Signin() {
     <div>
 
       <h1>Sign In</h1>
-      <input onChange={handleEmail} placeholder='Email id'/><br/>
-      <input onChange={handlePassword} placeholder='Password'/><br/>
-      <button onClick={handleSubmit}>Sign In</button><br/>
+      <Input onChange={handleEmail} placeholder='Email id'size='sm' width='auto' /><br/>
+      <Input onChange={handlePassword} placeholder='Password'size='sm' width='auto' /><br/>
+      <Button onClick={handleSubmit}>Sign In</Button><br/>
       <h6 onClick={handleClick}>For sign up</h6><br/>
       {loading&&<h4>loading...</h4>}
 
